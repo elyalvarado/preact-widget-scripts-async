@@ -1,5 +1,5 @@
 {
-  "name": "preact-widget-scripts-async",
+  "name": "preact-widget-scripts-async-to-promises",
   "version": "0.1.0",
   "description": "Common scripts used in making Preact widgets with async/await transformed to promises",
   "files": [
