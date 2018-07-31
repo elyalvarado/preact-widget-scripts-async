@@ -1,12 +1,15 @@
 {
-  "name": "preact-widget-scripts",
-  "version": "0.6.0",
-  "description": "Common scripts used in making Preact widgets",
-  "files": ["configs/", "babel.js"],
+  "name": "preact-widget-scripts-async",
+  "version": "0.1.0",
+  "description": "Common scripts used in making Preact widgets with async/await transformed to promises",
+  "files": [
+    "configs/",
+    "babel.js"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node babel.js && if [ $? -eq 0 ]; then echo 'Success'; else echo 'Dependecies failed'; fi"
   },
-  "author": "",
+  "author": "Ely Alvarado <elyalvarado@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "babel-plugin-jsx-pragmatic": "^1.0.2",
@@ -18,6 +21,10 @@
     "babel-plugin-transform-react-remove-prop-types": "^0.4.10",
     "babel-plugin-transform-regenerator": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "babel-preset-stage-1": "^6.24.1"
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-object-rest-spread": "^6.22.0",
+    "babel-plugin-async-to-promises": "^1.0.5"
   }
 }
